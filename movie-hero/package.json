@@ -1,0 +1,44 @@
+{
+  "name": "movie-catalogue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sd": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "compression-webpack-plugin": "^6.0.5",
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "file-loader": "^6.2.0",
+    "gsap": "^3.7.1",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^1.3.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  },
+  "dependencies": {
+    "idb": "^6.1.3",
+    "iso-639-1": "^2.1.9",
+    "jquery": "^3.6.0",
+    "lazysizes": "^5.3.2",
+    "regenerator-runtime": "^0.13.5",
+    "serviceworker-webpack-plugin": "^1.0.1"
+  }
+}
