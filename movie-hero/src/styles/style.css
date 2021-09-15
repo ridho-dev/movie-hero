@@ -154,10 +154,14 @@ li:active{
 .hero-logo{
     display: none;
 }
+.hero-logo img {
+    opacity: 0;
+}
 .hero-logo p{
     color: rgb(50, 130, 184);
     font-size: 40px;
     font-family: 'Lobster', sans-serif;
+    opacity: 0;
 }
 /* hero end */
 
