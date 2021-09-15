@@ -235,6 +235,9 @@ li:active{
 
 /* movie card end */
 
+.home-content h1{
+  opacity: 0;
+}
 
 .home-content__view-all, .second-content__view-all{
     text-align: center;
@@ -375,6 +378,10 @@ li:active{
     color: white;
     font-family: 'Dosis', sans-serif;
 }
+
+.specific-content h1{
+  opacity: 0;
+}
 .specific-content__container{
     width: 90%;
     margin: 0 auto;
@@ -382,7 +389,8 @@ li:active{
     min-height: 550px;
 }
 .specific-content__movie-page{
-  color: #b3b3b3;
+    color: #b3b3b3;
+    opacity: 0;
 }
 .view-more{
     margin: 50px auto;
