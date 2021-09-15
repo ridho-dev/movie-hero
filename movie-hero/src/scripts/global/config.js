@@ -3,7 +3,7 @@ const CONFIG = {
   BASE_URL: 'https://api.themoviedb.org/3/',
   BASE_IMG_URL: 'https://image.tmdb.org/t/p/w500',
   DEFAULT_LANGUAGE: 'en-us',
-  CACHE_NAME: 'MovieCatalogue-V2',
+  CACHE_NAME: 'MovieHero-V2.1',
   DATABASE_NAME: 'movie-catalogue-database',
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'movies',

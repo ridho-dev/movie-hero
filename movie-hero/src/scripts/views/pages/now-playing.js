@@ -5,17 +5,19 @@ import UrlParser from '../../routes/url-parser';
 
 const NowPlaying = {
   async render() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
     return `
         <section class="specific-content">
         <div class="specific-content__container">
             <h1>NOW PLAYING MOVIES</h1>
+            <p class="specific-content__movie-page">Page ${url.id}</p>
             <!-- the class used here is the same with the home page -->
             <div class="home-content__movie-card" id="movieCardContainer">
 
             </div>
             <div class="view-more">
-                <button id="viewBackButton"><i class="fas fa-chevron-left"></i></button>
-                <button id="viewNextButton"><i class="fas fa-chevron-right"></i></button>
+                <button class="view-back-button" id="viewBackButton"><i class="fas fa-chevron-left"></i></button>
+                <button class="view-next-button" id="viewNextButton"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
         </section>
@@ -23,13 +25,17 @@ const NowPlaying = {
   },
 
   async afterRender() {
+    const viewPageContainerElement = document.querySelector('.view-more');
     const viewBackPageElement = document.querySelector('#viewBackButton');
     const viewNextPageElement = document.querySelector('#viewNextButton');
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     let moviePage = parseInt(url.id, 10);
     // back button onclick
     if (moviePage === 1) {
+      viewPageContainerElement.style.gridTemplateColumns = '1fr';
       viewBackPageElement.style.display = 'none';
+    } else {
+      viewNextPageElement.style.margin = '0';
     }
     viewBackPageElement.addEventListener('click', () => {
       moviePage -= 1;
