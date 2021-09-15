@@ -126,11 +126,11 @@
     .app-bar{
         display: flex;
         justify-content: space-between;
-        padding: 20px 7%;
+        padding: 15px 7%;
     }
     .app-bar .app-bar__navigation{
         position: fixed;
-        top: 70px;
+        top: 60px;
         margin-left: 0px;
         left: -400px;
         height: 100%;
@@ -144,15 +144,22 @@
         padding: 10px;
         margin-top: -1px;
     }
+    .app-bar .app-bar__brand a{
+        font-size: 24px;
+    }
     .app-bar .app-bar__menu {
         display: flex;
         align-items: center;
+    }
+    .app-bar .app-bar__menu button {
+        font-size: 20px;
     }
     /* navbar end */
 
     /* hero */
     .hero{
         padding: 50px;
+        margin-top: 60px;
     }
     .hero-container{
         display: flex;
@@ -201,6 +208,9 @@
     /* movie card end */
 
     /* detail page */
+    .detail{
+      margin: 70px auto;
+    }
     .detail-container{
         grid-template-columns: none;
     }
@@ -258,9 +268,19 @@
         width: 160px;
     }
     .movie-card img{
-        height: 240px;
+        height: 220px;
         width: 160px;
         border-radius: 10px;
+    }
+    .card__add-info{
+        font-size: 10px;
+    }
+    .release-date{
+        word-spacing: 0;
+    }
+    .movie-title{
+        letter-spacing: 0;
+        font-size: 13px;
     }
     /* movie card end */
 
@@ -276,7 +296,7 @@
     /* movie card */
     .movie-card{
         margin-top: 30px;
-        width: 120px;
+        width: 140px;
     }
     .movie-card img{
         height: 210px;
@@ -308,16 +328,10 @@
         margin-top: 30px;
         width: 120px;
     }
-    .card__add-info{
-        font-size: 10px;
-    }
     .movie-card img{
         height: 180px;
         width: 120px;
         border-radius: 10px;
-    }
-    .movie-title{
-        font-size: 14px;
     }
     /* movie card end */
 }

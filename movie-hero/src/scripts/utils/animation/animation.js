@@ -34,6 +34,7 @@ const homeAnimation = () => {
 };
 const titleAnimation = () => {
   titleAnimationTemplate('.specific-content__container h1');
+  titleAnimationTemplate('.specific-content__movie-page', 0.2);
   cardAnimationTemplate('.view-more');
   detailAnimationTemplate('.detail-back-home', 0.5);
 };

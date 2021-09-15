@@ -26,24 +26,24 @@ const heroAnimationTemplate = (elementSelector, showingDelay) => {
   });
 };
 
-const titleAnimationTemplate = (elementSelector) => {
+const titleAnimationTemplate = (elementSelector, showingDelay) => {
   gsap.set(elementSelector, { x: -100 });
   ScrollTrigger.batch(elementSelector, {
     onEnter: (batch) => gsap.to(batch,
       {
-        x: 0, autoAlpha: 1, overwrite: true, duration: 0.7,
+        x: 0, autoAlpha: 1, overwrite: true, duration: 0.7, delay: showingDelay,
       }),
     onLeave: (batch) => gsap.set(batch,
       {
-        x: -100, autoAlpha: 0, overwrite: true, duration: 0.7,
+        x: -100, autoAlpha: 0, overwrite: true, duration: 0.7, delay: showingDelay,
       }),
     onEnterBack: (batch) => gsap.to(batch,
       {
-        x: 0, autoAlpha: 1, overwrite: true, duration: 0.7,
+        x: 0, autoAlpha: 1, overwrite: true, duration: 0.7, delay: showingDelay,
       }),
     onLeaveBack: (batch) => gsap.to(batch,
       {
-        opacity: 0, x: -100,
+        opacity: 0, x: -100, delay: showingDelay,
       }),
   });
 };

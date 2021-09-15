@@ -5,10 +5,12 @@ import UrlParser from '../../routes/url-parser';
 
 const Upcoming = {
   async render() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
     return `
         <section class="specific-content">
         <div class="specific-content__container">
             <h1>UPCOMING MOVIES</h1>
+            <p class="specific-content__movie-page">Page ${url.id}</p>
             <!-- the class used here is the same with the home page -->
             <div class="home-content__movie-card" id="movieCardContainer">
 
@@ -23,13 +25,18 @@ const Upcoming = {
   },
 
   async afterRender() {
+    const viewPageContainerElement = document.querySelector('.view-more');
     const viewBackPageElement = document.querySelector('#viewBackButton');
     const viewNextPageElement = document.querySelector('#viewNextButton');
     const url = UrlParser.parseActiveUrlWithoutCombiner();
+
     let moviePage = parseInt(url.id, 10);
     // back button onclick
     if (moviePage === 1) {
+      viewPageContainerElement.style.gridTemplateColumns = '1fr';
       viewBackPageElement.style.display = 'none';
+    } else {
+      viewNextPageElement.style.margin = '0';
     }
     viewBackPageElement.addEventListener('click', () => {
       moviePage -= 1;
