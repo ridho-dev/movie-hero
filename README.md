@@ -1,5 +1,5 @@
 # Movie Hero
-This is my personal web project that shows movie lists
+This is my personal web project that shows movie lists. Its uploaded already, you can check it in https://moviehero.netlify.app/
 
 I took the movies data from https://www.themoviedb.org/ API
 
